@@ -5,12 +5,11 @@ import SecondaryButton from "@/component/secondarybutton";
 import welcomeimage from "@/assets/images/welcomeimage.png";
 import { useRouter } from "expo-router";
 
-
 export default function WelcomePage() {
   const router = useRouter();
+
   return (
-    
-    <View style={{ flex: 1 }}>
+    <View style={styles.container}>
       <ImageBackground
         source={welcomeimage}
         style={styles.image}
@@ -22,11 +21,11 @@ export default function WelcomePage() {
       <View style={styles.buttonContainer}>
         <PrimaryButton
           title="Register"
-          onPress={() => router.push("/registerscreen")} 
+          onPress={() => router.push("/registerscreen")}
         />
         <SecondaryButton
           title="Log In"
-          onPress={() =>  router.push("/loginscreen")}
+          onPress={() => router.push("/loginscreen")}
         />
       </View>
     </View>
@@ -34,7 +33,16 @@ export default function WelcomePage() {
 }
 
 const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: "#fff" },
   image: { width: "100%", height: 300 },
-  title: { fontSize: 36, fontWeight: "bold", textAlign: "center", marginVertical: 20 },
-  buttonContainer: { padding: 20, gap: 12 },
+  title: {
+    fontSize: 36,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 20,
+  },
+  buttonContainer: {
+    padding: 20,
+    gap: 12,
+  },
 });

@@ -12,28 +12,26 @@ export default function HomePage() {
     <View style={styles.screen}>
       <ScrollView contentContainerStyle={styles.container}>
         
-        
         <Image
-          source={require("../assets/images/heroimage (2).png")} 
+          source={require("../assets/images/heroimage (2).png")}
           style={styles.heroImage}
         />
 
-       
+        
         <Text style={styles.header}>CyberGuard</Text>
         <Text style={styles.subheader}>Welcome back 👋</Text>
 
-       
         <View style={styles.card}>
           <Text style={styles.cardText}>Do you need to make a new scan?</Text>
           <TouchableOpacity
-            onPress={() => router.push("scannerscreen")}
+            onPress={() => router.push("/scannerscreen")}
             style={styles.scanButton}
           >
             <Text style={styles.scanButtonText}>Scan Now</Text>
           </TouchableOpacity>
         </View>
 
-       
+        
         <View style={styles.infoBox}>
           <Text style={styles.infoTitle}>Your Last Scan</Text>
           <Text style={styles.infoDetail}>2 vulnerabilities found</Text>
@@ -57,7 +55,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 20,
-    paddingBottom: 100, 
+    paddingBottom: 120, 
     alignItems: "center",
   },
   heroImage: {
@@ -67,10 +65,11 @@ const styles = StyleSheet.create({
     resizeMode: "contain",
   },
   header: {
-    fontSize: 40,
+    fontSize: 36,
     fontWeight: "bold",
     color: COLORS.primary,
     textAlign: "center",
+    marginVertical: 10,
   },
   subheader: {
     fontSize: 18,
@@ -97,13 +96,12 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   scanButton: {
-    width: "70%",          
-    backgroundColor: "#f25c0c", 
-    paddingVertical: 10,     
-    borderRadius: 30,       
+    width: "70%",
+    backgroundColor: "#f25c0c",
+    paddingVertical: 12,
+    borderRadius: 30,
     alignItems: "center",
-    marginBottom: 20,        
-    shadowColor: "#000",     
+    shadowColor: "#000",
     shadowOpacity: 0.1,
     shadowRadius: 6,
     elevation: 4,
@@ -117,7 +115,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     borderRadius: 12,
     padding: 15,
-    margin: 20,
+    marginVertical: 20,
     width: "100%",
     elevation: 2,
     shadowColor: "#000",
