@@ -190,7 +190,7 @@ export default function ScannerScreen() {
 const styles = StyleSheet.create({
   screen: { flex: 1, backgroundColor: "#fff" }, // Page background white
   container: { padding: 20, paddingBottom: 120 },
-  header: { fontSize: 28, fontWeight: "bold", color: "#000", textAlign: "center", marginBottom: 5 }, // Text black
+  header: { fontSize: 28, fontWeight: "bold", color: "#000", textAlign: "center", marginBottom: 5, padding: 30 }, // Text black
   subtitle: { color: "#000", textAlign: "center", opacity: 0.8, marginBottom: 20 }, // Text black
   inputCard: {
     backgroundColor: "#fff",
